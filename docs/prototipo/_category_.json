@@ -1,0 +1,8 @@
+{
+  "label": "Prototipo",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentación del prototipo base de slot machine. Incluye arquitectura, configuración, componentes UI y herramientas de desarrollo."
+  }
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+body, html{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 120px;
+}
+h2 {
+    font-size: 80px;
+}
+h6 {
+    font-size: 50px;
+}
+
+.bigwin
+{
+    text-align: center;
+    font-family: 'Wendy One', sans-serif;
+    text-transform: uppercase;
+    /* font-size: 150px; */
+    letter-spacing: 6px;
+    color: rgb(255, 255, 255);
+    /*background-color: rgba(54, 54, 54, 0.94);*/
+    text-shadow: rgb(0, 0, 0) 1px 14px 3px;
+}
+input.sideBet{
+    scale: 2;
+}
+label.sideBet{
+    font-size : 25px;
+    /* font-family: 'Wendy One', sans-serif; */
+}
+
+.values-container,
+.input-range,
+.input-number {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+}
+
+.debug-panel {
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 260px; /* 👈 más angosto */
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-container {
+    color: #000;
+}
+
+.input-number {
+    width: 75px;
+    font-size: 20px;
+    text-align: center;
+    color: #1f2937;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.6rem;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.06);
+    outline: none;
+    transition: border 150ms ease, box-shadow 150ms ease;
+}
+
+.input-number:focus {
+    border-color: #2CDDA2;
+    box-shadow: 0 0 0 4px rgb(44 221 162 / 0.3);
+}
+
+input {
+    accent-color: #2CDDA2;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.input-range {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2CDDA2;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+    background-color: #24c892;
+}
+
+button:active {
+    transform: scale(0.96);
+}

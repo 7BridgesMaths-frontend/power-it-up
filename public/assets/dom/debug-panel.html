@@ -1,0 +1,147 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    .values-container,
+    .input-range,
+    .input-number {
+         font-family: 'Inter', sans-serif;
+         font-size: 24px;
+    }
+
+    .debug-panel {
+        padding: 20px;
+        background-color: whitesmoke;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 260px; /* 👈 más angosto */
+    }
+
+    .values-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .control-container {
+        color: #000;
+    }
+
+    .input-number {
+        width: 75px;
+        font-size: 20px;
+        text-align: center;
+        color: #1f2937;
+        background-color: #f3f4f6;
+        border: 1px solid #d1d5db;
+        border-radius: 0.6rem;
+        padding: 5px;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 0.06);
+        outline: none;
+        transition: border 150ms ease, box-shadow 150ms ease;
+    }
+
+    .input-number:focus {
+        border-color: #2CDDA2;
+        box-shadow: 0 0 0 4px rgb(44 221 162 / 0.3);
+    }
+
+    input {
+        accent-color: #2CDDA2;
+    }
+
+    input[type="checkbox"]{
+        transform: scale(1.4);
+        cursor: pointer;
+    }
+
+    .input-range {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 8px;
+        border: none;
+        background-color: #2CDDA2;
+        color: #000;
+        cursor: pointer;
+        transition: transform 0.1s ease, background 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #24c892;
+    }
+
+    button:active {
+        transform: scale(0.96);
+    }
+</style>
+
+<div class="debug-panel">
+    <div class="control-container">
+        <label class="values-container" for="posX">
+            <span>X:</span>
+            <span id="posX_value">0</span>
+        </label>
+
+        <input 
+            type="range" 
+            id="posX" 
+            name="posX" 
+            class="input-range"
+            min="-2000" 
+            max="2000"
+            step="1"
+        />
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="posY">
+            <span>Y: </span>
+            <span id="posY_value">0</span>
+        </label>
+        <input class="input-range" type="range" id="posY" name="posY" min="-2000" max="2000" />
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="scaleX">
+            <span>scaleX: </span> 
+            <span id="scaleX_value">0</span>
+        </label>
+        <input class="input-range" type="range" id="scaleX" name="scaleX" min="0" step="0.01" max="2" />
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="scaleY">
+            <span>scaleY: </span> 
+            <span id="scaleY_value">0</span>
+        </label>
+        <input class="input-range" type="range" id="scaleY" name="scaleY" min="0" step="0.01" max="2" />
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="visible">
+            <span>Visible</span>
+            <input type="checkbox" id="visible" name="visible" checked />
+        </label>
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="depth">
+            <span>Depth</span>
+            <input 
+                type="number" 
+                id="depth" 
+                name="depth"
+                class="input-number"
+                placeholder="0"
+            />
+        </label>
+    </div>
+    <div class="control-container">
+        <label class="values-container" for="depth">
+            <button id="debug-panel-button">Start</button>
+        </label>
+    </div>
+</div>
